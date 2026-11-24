@@ -1,0 +1,104 @@
+{
+  "arithmetic": "exact integers",
+  "patterns": [
+    {
+      "cover_indices": 0,
+      "independent_pattern_pairs": 1,
+      "pattern_pairs": 1
+    },
+    {
+      "cover_indices": 1,
+      "independent_pattern_pairs": 3,
+      "pattern_pairs": 4
+    },
+    {
+      "cover_indices": 2,
+      "independent_pattern_pairs": 9,
+      "pattern_pairs": 16
+    },
+    {
+      "cover_indices": 3,
+      "independent_pattern_pairs": 27,
+      "pattern_pairs": 64
+    },
+    {
+      "cover_indices": 4,
+      "independent_pattern_pairs": 81,
+      "pattern_pairs": 256
+    },
+    {
+      "cover_indices": 5,
+      "independent_pattern_pairs": 243,
+      "pattern_pairs": 1024
+    },
+    {
+      "cover_indices": 6,
+      "independent_pattern_pairs": 729,
+      "pattern_pairs": 4096
+    },
+    {
+      "cover_indices": 7,
+      "independent_pattern_pairs": 2187,
+      "pattern_pairs": 16384
+    },
+    {
+      "cover_indices": 8,
+      "independent_pattern_pairs": 6561,
+      "pattern_pairs": 65536
+    }
+  ],
+  "scope": "Finite swap graphs and directional membership patterns",
+  "status": "pass",
+  "swap_graphs": [
+    {
+      "clique_number": 0,
+      "ground_size": 0,
+      "vertices": 0
+    },
+    {
+      "clique_number": 0,
+      "ground_size": 1,
+      "vertices": 0
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 2,
+      "vertices": 2
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 3,
+      "vertices": 6
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 4,
+      "vertices": 12
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 5,
+      "vertices": 20
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 6,
+      "vertices": 30
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 7,
+      "vertices": 42
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 8,
+      "vertices": 56
+    },
+    {
+      "clique_number": 2,
+      "ground_size": 9,
+      "vertices": 72
+    }
+  ]
+}

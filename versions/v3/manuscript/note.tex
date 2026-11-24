@@ -1,0 +1,541 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,array,longtable,microtype}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\N}{\mathbb N}
+\newcommand{\DS}[1]{D(#1)}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\hatset}[1]{\widehat{#1}}
+\newcommand{\op}{\mathrm{op}}
+\setlength{\emergencystretch}{2em}
+\title{A ZFC extension of Brandsma--van Hartskamp--van Mill's example\par
+for Feldman--Wilce's bounded-clique question}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{18 November 2026\\[-1pt]{\small CC BY 4.0}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending the conditional example of Brandsma, van Hartskamp and van Mill
+(1997, Example~2.3, pp.~28--29), we answer yes in ZFC to Feldman and
+Wilce's Section~5, Question~2, p.~11 of arXiv:2608.13320v1: the
+bounded-clique property is strictly weaker than the finite open chromatic
+property, as witnessed by a deleted-square construction.
+The space $D(\beta\N)=(\beta\N)^2\setminus\Delta$ has countably compact
+countable power, so every symmetric irreflexive relation closed in its
+whole square has a finite bound on clique size. Its coordinate-swap
+relation nevertheless has no countable cover by open independent sets.
+Clopen separation proves the compactness assertion, and an infinite
+Ramsey argument proves the coloring obstruction. We also give an explicit
+higher power that is not countably compact and derive the sphere lower
+bound suggested by Feldman and Wilce from Holmsen--Lee's theorem.
+\end{abstract}
+
+\section{The question and its witness}
+For a topological space $X$, a \emph{closed orthogonality} is a symmetric,
+irreflexive relation $R\subseteq X^2$ closed in the entire product,
+including its diagonal. An $R$-clique is a subset whose distinct points
+are pairwise related. Following Feldman--Wilce~\cite{FW}, $X$ has the
+\emph{bounded-clique property} if, for each closed orthogonality $R$,
+there is an integer $N_R$ bounding the cardinality of every $R$-clique.
+The bound depends on $R$; in particular every clique is finite.
+The \emph{open chromatic number} $\chi_\op(R)$ is the least cardinality
+of a cover of $X$ by open $R$-independent sets. Cover members may overlap.
+The \emph{finite open chromatic property} requires
+$\chi_\op(R)<\infty$ for every closed orthogonality $R$.
+
+Compactness implies the finite open chromatic property, which implies
+the bounded-clique property. Feldman--Wilce's Question~2 asks whether
+the second implication is strict~\cite[Section~5, p.~11]{FW}.
+We use the Stone space $K=\beta\N$ of ultrafilters on the discrete
+natural numbers and its deleted square
+\[
+ X=\DS K=\{(p,q)\in K^2:p\ne q\},
+ \qquad \tau(p,q)=(q,p).
+\]
+Both $X$ and its products carry their indicated subspace and product
+topologies, respectively.
+
+\begin{theorem}\label{main}
+In ZFC the Hausdorff space $X=\DS{\beta\N}$ has countably compact
+countable power and the bounded-clique property. The relation
+\[
+ R_\tau=\{(x,\tau(x)):x\in X\}\subseteq X^2
+\]
+is a closed orthogonality with clique number exactly $2$ and
+$\aleph_1\le\chi_\op(R_\tau)\le 2^{\aleph_0}$. Consequently $X$ does not have the
+finite open chromatic property.
+\end{theorem}
+
+An earlier conditional separation follows from Brandsma--van
+Hartskamp--van Mill~\cite[Example~2.3, pp.~28--29]{BHM}.
+They credit the involution construction in that example to LaBerge.
+Under $\diamondsuit$ they describe a first-countable, countably compact,
+perfectly normal space $E$ with a fixed-point-free involution and with
+$\beta E$ its one-point compactification. First countability makes $E$
+sequentially compact: an infinite sequence either repeats a point
+infinitely often or has a cluster point, from whose countable local
+base a convergent subsequence can be chosen. Hence Feldman--Wilce's
+Corollary~4(a) gives the bounded-clique property. The involution extends
+to $\beta E$ and fixes its unique remainder point. It therefore has no
+finite coloring in the sense of~\cite[pp.~25--26]{BHM}. In that definition
+colors are functionally open; here every open set is functionally open
+because $E$ is perfectly normal. Its closed involution graph thus has
+no finite open independent cover. Theorem~\ref{main} removes the
+additional set-theoretic hypothesis by a different, explicit space.
+
+The point-pair separation argument below is self-contained for compact
+Hausdorff extremally disconnected spaces. A compact $F$-space is a compact
+Hausdorff space in which disjoint cozero sets have disjoint closures;
+a cozero set is $f^{-1}(\mathbb R\setminus\{0\})$ for a continuous
+real-valued function $f$. Protasov--Pym--Strauss
+\cite[Lemma~2.1, p.~211]{PPS} prove that unequal pairs in a compact
+Hausdorff $F$-space have a common subsequence whose endpoint sets have
+disjoint closures. In an extremally disconnected compact space these
+compact sets have a clopen separator, giving Lemma~\ref{pair} below.
+Their Two-Function Lemma~2.2 (p.~212), applied to the projections
+$K^2\to K$, already gives countable compactness of $D(K)$ for every
+compact Hausdorff $F$-space $K$. Thus the separation mechanism is prior
+work; we retain a self-contained proof under the stronger
+extremal-disconnectedness hypothesis.
+
+\section{Clopen separation and countable compactness}
+A compact Hausdorff space is \emph{extremally disconnected} if the
+closure of every open set is open. Such a space has a clopen base:
+given $x\in U$ open, regularity gives $x\in V\subseteq\cl V\subseteq U$,
+and $\cl V$ is clopen. Moreover, disjoint open sets have disjoint
+closures. Indeed, if $V,W$ are disjoint open sets, then
+$W\cap\cl V=\varnothing$; the clopen set $\cl V$ also misses $\cl W$.
+
+For $A\subseteq\N$, put
+$\hatset A=\{p\in\beta\N:A\in p\}$. These sets form a clopen base,
+and the principal ultrafilters identify $\N$ with a dense subspace.
+If $O\subseteq\beta\N$ is open, then $O\cap\N$ is dense in $O$ and
+$\cl(O\cap\N)=\hatset{O\cap\N}$. Thus $\beta\N$ is extremally
+disconnected. We use the usual compact Hausdorff topology of this
+Stone space.
+
+\begin{lemma}\label{pair}
+Let $K$ be compact Hausdorff and extremally disconnected. For any
+sequence $(p_n,q_n)$ with $p_n\ne q_n$, there is a clopen
+$C\subseteq K$ such that $p_n\in C$ and $q_n\notin C$ for infinitely
+many indices $n$.
+\end{lemma}
+\begin{proof}
+Suppose otherwise. Applying the supposition to $C$ and $K\setminus C$
+shows that for every clopen $C$, the equivalence
+$p_n\in C\Longleftrightarrow q_n\in C$ holds eventually.
+
+We construct decreasing clopen sets $C_0=K,C_1,\ldots$, decreasing
+infinite sets of available indices $L_n$, and strictly increasing
+$k_n\in L_n$. Both endpoints of every indexed pair in $L_n$ lie in
+$C_n$. Given $k_n$, choose a clopen $H\subseteq C_n$ containing
+$p_{k_n}$ and missing $q_{k_n}$. After discarding finitely many
+indices, the two endpoints of each remaining pair agree on membership
+in $H$. Infinitely many pairs therefore lie either both in $H$ or
+both in $C_n\setminus H$. Let $C_{n+1}$ be that side, and let
+$L_{n+1}\subseteq L_n$ be the corresponding infinite set of indices
+larger than $k_n$. Label the endpoints of the pair at $k_n$ as
+$x_n,y_n$ so that
+\[
+ x_n\in D_n:=C_n\setminus C_{n+1},\qquad y_n\in C_{n+1}.
+\]
+The shells $D_n$ are pairwise disjoint and clopen. If $y_i\in D_j$,
+then $i<j$.
+
+For each $i$ let $r(i)$ be the unique shell index containing $y_i$,
+if such an index exists, and put $r(i)=i$ otherwise. Define
+$b_0=0$ and $b_{n+1}=1+\max(b_n,r(b_n))$. Then
+\[
+ y_{b_n}\notin D_{b_m}\quad\hbox{for all }n,m.
+\]
+For $m\le n$ this follows from the preceding shell order; for $m>n$
+we have $b_m>r(b_n)$. Write $B=\{b_n:n\in\N\}$ and
+$Q(A)=\cl\bigl(\bigcup_{i\in A}D_i\bigr)$ for $A\subseteq B$.
+Splitting any infinite $A\subseteq B$ into two disjoint infinite parts
+gives disjoint clopen sets $Q(A')$ and $Q(A'')$. At least one misses
+any prescribed point.
+
+Consequently we can choose decreasing infinite sets
+$A_0=B,A_1,\ldots$ such that $y_{b_n}\notin Q(A_{n+1})$.
+Choose strictly increasing $s_n\in A_n$ and put $S=\{s_n:n\in\N\}$.
+For every $n$, the set $S\setminus A_{n+1}$ is finite. The identity
+of the union with its two parts gives
+\[
+ Q(S)\subseteq Q(A_{n+1})\ \cup\!
+ \bigcup_{i\in S\setminus A_{n+1}}D_i.
+\]
+The point $y_{b_n}$ misses both sets on the right. Thus the clopen
+set $Q(S)$ contains $x_i$ and misses $y_i$ for every $i\in S$.
+It distinguishes the original pair at $k_i$ infinitely often,
+contrary to eventual agreement. This proves the lemma.
+\end{proof}
+
+\begin{lemma}\label{power}
+If $K$ is compact Hausdorff and extremally disconnected, then
+$\DS K^{\,\N}$, meaning $(\DS K)^\N$, is countably compact.
+\end{lemma}
+\begin{proof}
+If $\DS K$ is empty the assertion is immediate. Otherwise let
+$z_n=(z_n(j))_{j\in\N}$ be any sequence in $(\DS K)^\N$.
+Apply Lemma~\ref{pair} to its zeroth coordinate. On an infinite
+set of indices, that coordinate lies in $C_0\times(K\setminus C_0)$
+for a clopen $C_0$. Repeat on this infinite set for coordinate $1$,
+then coordinate $2$, and so on, producing nested infinite index sets.
+A diagonal subsequence $z_{a_n}$ eventually satisfies each coordinate's
+clopen constraint. Compactness of $(K^2)^\N$ supplies a cluster point
+$w=(w(j))_j$ of this subsequence. Each closed rectangle
+$C_j\times(K\setminus C_j)$ contains its $j$th coordinate eventually,
+so contains $w(j)$. Thus $w(j)$ has unequal coordinates for every $j$,
+and $w\in(\DS K)^\N$. The subspace topology makes $w$ a cluster
+point there as well.
+
+For completeness, in a $T_1$ space the sequence cluster-point property
+implies countable compactness. If an increasing countable open cover
+$V_n$ had no finite subcover, choose $u_n\notin V_n$. A cluster point
+in $V_N$ would have a neighborhood containing no terms with $n\ge N$,
+a contradiction. Conversely, countable compactness gives a cluster
+point of every sequence by intersecting the decreasing nonempty
+closed sets $\cl\{u_n:n\ge N\}$. This also covers sequences with
+repetitions. Applying the first implication proves the assertion.
+\end{proof}
+
+The same countable-power conclusion holds for every compact Hausdorff
+$F$-space $K$, as a consequence of~\cite[Lemma~2.1]{PPS}.
+For each coordinate successively, thin to an infinite set of indices
+whose two endpoint sets have disjoint closures $A_j,B_j\subseteq K$.
+A diagonal subsequence eventually belongs to $A_j\times B_j$ in
+coordinate $j$. Any cluster point in the compact space $(K^2)^\N$
+then belongs to $(D(K))^\N$, since $A_j\cap B_j=\varnothing$ for every
+$j$. This is a deduction from the cited separation lemma, rather than
+a countable-power statement quoted from that paper.
+
+\begin{lemma}[Feldman--Wilce, Theorem 1]\label{criterion}
+If $Y^\N$ is countably compact, then $Y$ has the bounded-clique
+property.
+\end{lemma}
+\begin{proof}
+We give the argument of~\cite[Section~3, pp.~7--8]{FW}.
+The empty space is immediate; otherwise projection shows that $Y$
+is countably compact. An infinite clique would contain a sequence
+of distinct points with cluster point $y$. For any neighborhoods
+$U,V$ of $y$, infinitely many sequence indices lie in $U\cap V$;
+two distinct terms therefore give an edge in $U\times V$.
+Closedness of the relation would imply $(y,y)\in R$, contrary to
+irreflexivity. All cliques are thus finite.
+
+If finite clique sizes were unbounded, choose an $(n+1)$-clique
+$\{y_{n,0},\ldots,y_{n,n}\}$ for every $n\ge0$, and define
+$v_n(j)=y_{n,\min(j,n)}$. Let $v\in Y^\N$ be a cluster point of
+the sequence $v_n$. For $i\ne j$ and neighborhoods $U$ of $v(i)$
+and $V$ of $v(j)$, some $n\ge\max(i,j)$ satisfies
+$v_n(i)\in U$, $v_n(j)\in V$. These are distinct members of one
+clique, so $(v(i),v(j))\in R$ by closedness. Irreflexivity makes
+the coordinates $v(i)$ pairwise distinct. They form an infinite
+clique, contradicting the preceding paragraph.
+\end{proof}
+
+\section{The swap graph has no finite open coloring}
+The graph $R_\tau$ is closed in $X^2$: it is the intersection of
+the two closed equality sets asserting $p=s$ and $q=r$ for
+$x=(p,q)$ and $y=(r,s)$. It is symmetric because $\tau^2$ is the
+identity, and irreflexive because $p\ne q$. Each point has exactly
+one neighbor. A clique therefore has at most two points, and
+$\{x,\tau(x)\}$ attains that bound.
+
+\begin{lemma}\label{color}
+No finite family of open $R_\tau$-independent subsets covers $X$.
+\end{lemma}
+\begin{proof}
+Suppose $U_1,\ldots,U_m$ is such a cover; $m=0$ already fails
+because $X$ is nonempty. For distinct principal points $a,b\in\N$,
+write
+\[
+ P(a,b)=\{i:(a,b)\in U_i\}\subseteq\{1,\ldots,m\}.
+\]
+Color the unordered pair $\{a,b\}$, where $a<b$, by the ordered
+pair $(P(a,b),P(b,a))$. The infinite Ramsey theorem for finite
+colorings of pairs gives an infinite $A\subseteq\N$ and fixed
+patterns $P,Q$ such that
+\[
+ P(a,b)=P,\qquad P(b,a)=Q\quad(a<b,\ a,b\in A).
+\]
+Here $P\cap Q=\varnothing$, since otherwise a single $U_i$ would
+contain a point and its swap.
+
+The finite-color Ramsey fact used here has a short proof. Choose
+$a_0$ and an infinite set of larger vertices whose pairs with $a_0$
+have one fixed color. Choose $a_1$ in that set and thin its remaining
+tail to one color from $a_1$, and continue. The infinite pigeonhole
+principle gives an infinite subsequence of the $a_j$ whose chosen
+colors agree; all pairs in that subsequence have that color.
+
+Split $A$ into disjoint infinite sets $A_0,A_1$. Extend the cofinite
+filter on each support to free ultrafilters $p,q$ containing $A_0,A_1$,
+respectively. Their disjoint supports imply $p\ne q$. Choose
+$i$ with $(p,q)\in U_i$. Openness and the clopen rectangle base give
+$B_0\in p$, $C_0\in q$ such that every unequal pair in
+$\hatset{B_0}\times\hatset{C_0}$ belongs to $U_i$. Put
+$B=B_0\cap A_0$ and $C=C_0\cap A_1$. These are disjoint infinite
+subsets of $A$, since members of free ultrafilters are infinite.
+Every principal pair in $B\times C$ therefore belongs to $U_i$.
+There exist $b\in B,c\in C$ with $b<c$, forcing $i\in P$.
+There also exist $b'\in B,c'\in C$ with $c'<b'$, forcing $i\in Q$.
+The two principal pairs need not be swaps; their common color
+membership and the homogeneous patterns give the contradiction
+$i\in P\cap Q$.
+\end{proof}
+
+Apply Lemmas~\ref{power} and~\ref{criterion} with $K=\beta\N$,
+and then Lemma~\ref{color}. Together with the graph observations,
+these prove the finite-color assertion of Theorem~\ref{main}.
+Since $X$ is countably compact, a countable open cover would have a finite
+subcover; hence $\chi_\op(R_\tau)\ge\aleph_1$.
+For the upper bound, the $2^{\aleph_0}$ open sets
+$\hatset A\times\hatset{\N\setminus A}$, $A\subseteq\N$, cover $X$
+and are independent. Distinct ultrafilters are separated by one such $A$.
+This completes Theorem~\ref{main}. All choices above are within ZFC.
+
+\section{Consequences and source coverage}
+\begin{corollary}\label{products}
+For every nonempty finite or countably infinite set $I$, the
+Hausdorff space $X^I$ has the bounded-clique property and fails
+the finite open chromatic property.
+\end{corollary}
+\begin{proof}
+The space $(X^I)^\N$ is homeomorphic to $X^{I\times\N}$, hence
+to $X^\N$, so Lemma~\ref{criterion} applies. Fix $i_0\in I$.
+Pulling $R_\tau$ back along the coordinate projection defines a
+closed orthogonality on $X^I$. If it admitted a finite open independent
+cover, restricting that cover to the continuous copy of $X$ with
+all other coordinates fixed would contradict Lemma~\ref{color}.
+\end{proof}
+
+\begin{corollary}
+The witness $X$ is locally compact, zero-dimensional, separable,
+countably compact and noncompact. Its square $X^2$ is not normal.
+\end{corollary}
+\begin{proof}
+It is an open subspace of the compact Hausdorff zero-dimensional
+space $(\beta\N)^2$, giving the first two assertions. The countable
+set $\{(a,b)\in\N^2:a\ne b\}$ is dense: around $(p,q)$ with $p\ne q$
+choose disjoint basic clopen neighborhoods, and use density of
+principal points in each. Countable compactness follows by projection
+from $X^\N$. For any free ultrafilter $p$, every neighborhood of
+$(p,p)$ contains unequal principal pairs. Thus $X$ is not closed
+in $(\beta\N)^2$, and so is not compact.
+
+Finally, $X^2$ is countably compact, hence pseudocompact (every
+continuous real-valued function has bounded image). If $X^2$ were
+normal, Brandsma--van Hartskamp--van Mill's Theorem~2.1
+\cite[p.~28]{BHM} would give a finite functionally open coloring
+of every continuous fixed-point-free map on the Tychonoff space $X$.
+Applied to $\tau$, this would be a finite open independent cover,
+contradicting Lemma~\ref{color}.
+\end{proof}
+
+\begin{corollary}\label{general}
+For every infinite compact Hausdorff extremally disconnected space $K$,
+$D(K)$ has the bounded-clique property and its swap relation has no
+countable open independent cover.
+\end{corollary}
+\begin{proof}
+An infinite compact space with a clopen base has countably many disjoint
+nonempty clopen sets $V_n$: repeatedly split an infinite clopen remainder
+into two nonempty clopen sets, retain an infinite part, and remove the other.
+Choose $x_n\in V_n$. For every $A\subseteq\N$, the clopen set
+$\cl\bigcup_{n\in A}V_n$ contains $x_n$ exactly when $n\in A$.
+The continuous extension $\beta\N\to K$ of $n\mapsto x_n$ is therefore
+injective: if two ultrafilters disagree on $A$, their images disagree on
+this clopen set. Compactness and Hausdorffness make it an embedding.
+Consequently $D(\beta\N)$ embeds in $D(K)$ compatibly with swapping;
+a finite open independent cover would restrict to one of $D(\beta\N)$.
+Lemma~\ref{power} gives countable compactness and hence also excludes
+countable covers. Lemma~\ref{criterion} supplies bounded cliques.
+\end{proof}
+
+\begin{corollary}\label{largepower}
+Let $I=\beta\N\setminus\N$. Then $X^\N$ is countably compact but
+$X^I$ is not. In particular, $X$ is not $u$-compact for any free
+ultrafilter $u$ on $\N$.
+\end{corollary}
+\begin{proof}
+Define $z_n\in X^I$ by $z_n(v)=(n,v)$. If $w$ were a cluster point
+of $(z_n)$, the second component of $w(v)$ would be $v$ for every $v$.
+All first components would equal one point $p\in\beta\N$, since the
+equalities between any two first-coordinate projections define closed sets
+containing every $z_n$. The point $p$ cannot be a principal natural number
+$k$: its singleton clopen neighborhood would meet the sequence only at
+$n=k$, contrary to the cluster-point condition. Thus $p\in I$, but then
+$w(p)=(p,p)\notin X$, a contradiction.
+
+Here $u$-compact means that every sequence has a $u$-limit. If $X$ were
+$u$-compact, the sequence $(z_n)$ would have a coordinatewise $u$-limit
+in $X^I$, which is a cluster point because $u$ is free. This proves the
+last assertion directly.
+\end{proof}
+
+This answers the general-space existence question in
+Feldman--Wilce's Remark~4 (p.~8), but that existence assertion already
+follows from Ortiz-Castillo, Rodrigues and Tomita~\cite{ORT},
+Example~2.3 and Theorem~3.2 (preprint pp.~6--8).
+Indeed, their Example~2.3 gives $\N\subseteq Y\subseteq\beta\N$ with
+$Y^\kappa$ countably compact for every $\kappa<\mathfrak t$, while
+the Vietoris space $\operatorname{CL}(Y)$ of nonempty closed subsets is
+not pseudocompact. The tower number $\mathfrak t$ is the least size of a
+well-ordered decreasing-modulo-finite family of infinite subsets of $\N$ with no
+infinite set almost contained in all its members; $\aleph_0<\mathfrak t$.
+If $Y^{\mathfrak c}$ were countably compact, its dense subset
+$\N^{\mathfrak c}$ would be relatively countably compact there.
+Their Theorem~3.2 would make $\operatorname{CL}(Y)$ pseudocompact,
+a contradiction. Here $\mathfrak c=2^{\aleph_0}$, relative countable
+compactness means every sequence in the subset has a cluster point in
+the ambient space, and pseudocompactness means that every continuous
+real-valued function is bounded. Thus their results already imply
+$Y^\N$ countably compact and $Y^{\mathfrak c}$ not countably compact.
+Corollary~\ref{largepower} is an alternative explicit witness, not a first
+existence answer or a topological-group construction.
+
+\begin{corollary}\label{sphere}
+The unit sphere $S^2\subseteq\mathbb R^3$, with literal orthogonality,
+has $\chi_\op(S^2,\perp)\ge5$.
+\end{corollary}
+\begin{proof}
+Suppose four open orthogonality-free sets $U_1,\ldots,U_4$ cover $S^2$.
+A smaller nonempty cover can be enlarged to four by repetitions.
+Choose four pairwise disjoint nonempty open balls $B_i\subseteq U_i$.
+Assign each point of $B_i$ to class $i$, and assign every other point
+to any index whose $U_i$ contains it. This gives an orthogonal partition
+$S^2=S_1\sqcup\cdots\sqcup S_4$ with $B_i\subseteq S_i\subseteq U_i$.
+By Holmsen--Lee~\cite[Theorem~1, preprint p.~2]{HL}, this partition is
+octahedral: in a common orthonormal coordinate frame, each class is
+contained in a pair of opposite closed octants. All four distinct pairs
+must occur, since the partition covers the sphere. Each $S_i$, and hence
+each $U_i$, therefore contains the corresponding pair of open octants.
+
+No $U_i$ can contain a point $q$ of another open octant. After sign changes
+and possibly replacing $q$ by $-q$, its coordinates have both signs
+relative to the positive octant assigned to $i$. There is a vector $y$
+with all coordinates positive and $q\cdot y=0$: choose positive weights
+on the positive and negative coordinates to balance the two sums.
+Normalize $y$ to lie on $S^2$. It belongs to $U_i$, contradicting
+orthogonality-freeness. If $U_i$ contained an octant boundary point,
+openness would force it to contain a point in another open octant.
+Thus the $U_i$ miss all octant boundaries and cannot cover $S^2$.
+\end{proof}
+
+Corollary~\ref{sphere} proves the bound suggested in
+Feldman--Wilce's Remark~6. Together with their Section~5 construction
+it gives $5\le\chi_\op(S^2,\perp)\le24$; it does not determine the
+least number asked for in Question~3.
+
+The following table records source coverage; ``not covered'' describes
+the scope of these arguments, not the current status of a problem.
+\begin{longtable}{>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{.56\linewidth}}
+\hline
+Source item & Coverage\\
+\hline
+Question 2, Section 5, p.~11 & Answered: yes, in ZFC (Theorem~\ref{main});
+conditional predecessor:~\cite[Example~2.3]{BHM}.\\
+Theorem 1, Section 3, pp.~7--8 & Reproved; prior proof:
+Feldman--Wilce (2026), Lemma~\ref{criterion}.\\
+Question 1, Section 1, p.~5; selector in Section 4, p.~10 &
+Not covered. It asks for failure of the bounded-clique property,
+whereas the present witness has that property.\\
+Remark 2, p.~5 (necessity of countable compactness for finite cliques;
+unbounded cliques without a $T_1$ restriction) & Not covered: the present
+witness has bounded cliques. The second question allows $T_1$ witnesses.\\
+Remark 4, p.~8 (countable versus higher powers) & Answered: yes;
+prior existence proof: Ortiz-Castillo--Rodrigues--Tomita (2017/2018),
+Example~2.3 and Theorem~3.2. Alternative witness:
+Corollary~\ref{largepower}.\\
+Question 3, Section 5, p.~11; Remark 6, p.~12 &
+Suggested bound proved (Corollary~\ref{sphere}), using
+Holmsen--Lee (2015/2016). Exact value and general-dimensional estimates:
+not covered.\\
+Countable powers of the present witness & Not posed in the source;
+proved in Corollary~\ref{products}.\\
+Uncountable swap open chromatic number; infinite extremally disconnected
+compact spaces & Not posed; proved in Theorem~\ref{main} and
+Corollary~\ref{general}.\\
+\cite[Theorem 2.1, p.~28]{BHM} & Prior proof cited; applied above
+to deduce that $X^2$ is not normal.\\
+\cite[Lemmas 2.1--2.2, pp.~211--212]{PPS} & Prior proof cited:
+pair separation and deleted-square countable compactness;
+the countable-power consequence is deduced in Section~2.\\
+\cite[Question 1.1, p.~27; Question 5.3, p.~39]{BHM} &
+Not covered: the present space is not equipped with the required
+topological group structure.\\
+\hline
+\end{longtable}
+
+\section{Verification scope}
+The written proofs above cover every assertion of this note.
+The following declarations are in the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Topology/StoneCech/DeletedSquareChromatic.lean}{\nolinkurl{DeletedSquareChromatic.lean}},
+in namespace
+\nolinkurl{D5.S3.Topology.StoneCech.DeletedSquareChromatic}:
+\begin{itemize}
+\item \nolinkurl{countablyCompactSpace_deletedSquare_power}: Lemma~\ref{power}
+for compact Hausdorff extremally disconnected spaces;
+\item \nolinkurl{boundedCliqueProperty_of_countablyCompact_power}:
+the universal graph conclusion of Lemma~\ref{criterion}, including
+finiteness of every clique;
+\item \nolinkurl{no_finite_open_independent_cover}:
+Lemma~\ref{color}, allowing overlapping cover members;
+\item \texttt{result}: Hausdorffness of $D(\beta\N)$, its bounded-clique
+property and failure of the finite open chromatic property.
+\end{itemize}
+The clopen agreement statement used for Lemma~\ref{pair} appears as
+\nolinkurl{eventually_eq_of_eventually_mem_isClopen_iff} in the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Topology/ExtremallyDisconnected/PointPairSeparation.lean}{\nolinkurl{PointPairSeparation.lean}}.
+The local-compactness, separability, nonnormal-square, countable-product,
+general-space and higher-power corollaries, the uncountable chromatic lower
+bound and continuum upper bound, the comparison with~\cite{BHM}, and the
+exact swap clique number are written proofs here. The compact
+$F$-space countable-power statement is the written deduction from
+\cite[Lemma~2.1]{PPS} in Section~2, beyond the extremally disconnected
+scope of the displayed Lean declaration. Corollary~\ref{sphere}
+is a written consequence of Holmsen--Lee's theorem; the comparison for
+Remark~4 uses the cited hyperspace results. The accompanying
+\texttt{verify.py} checks finite swap-graph and directional membership-pattern
+identities, with the exact ranges in \texttt{README.md} and
+\texttt{verification.json}. Those finite checks concern finite graph
+identities; the infinite topological statements are proved above.
+
+\begin{thebibliography}{9}
+\bibitem{FW}
+David V. Feldman and Alexander Wilce,
+\emph{A Note on Compactness and Clique Size},
+arXiv:2608.13320v1 (2026),
+\url{https://arxiv.org/abs/2608.13320v1}.
+\bibitem{BHM}
+Henno Brandsma, Michael van Hartskamp and Jan van Mill,
+\emph{On colorings of topological groups},
+Topology Proceedings \textbf{22} (1997), 25--41,
+\url{https://staff.fnwi.uva.nl/j.vanmill/papers/papers1997/colorings.pdf}.
+\bibitem{PPS}
+I. Protasov, J. Pym and D. Strauss,
+\emph{A lemma on extending functions into $F$-spaces and homomorphisms
+between Stone--\v{C}ech remainders},
+Topology and its Applications \textbf{105} (2000), 209--229,
+\url{https://doi.org/10.1016/S0166-8641(99)00061-9}.
+\bibitem{ORT}
+Y. F. Ortiz-Castillo, V. O. Rodrigues and A. H. Tomita,
+\emph{Small Cardinals and the Pseudocompactness of Hyperspaces of
+Subspaces of $\beta\omega$},
+Topology and its Applications \textbf{246} (2018), 9--21;
+arXiv:1710.06087v2 (6 November 2017),
+\url{https://arxiv.org/abs/1710.06087v2}.
+\bibitem{HL}
+Andreas F. Holmsen and Seunghun Lee,
+\emph{Orthogonal colorings of the sphere},
+Mathematika \textbf{62} (2016), 492--501;
+arXiv:1505.02514v3 (26 August 2015),
+\url{https://arxiv.org/abs/1505.02514v3}.
+\end{thebibliography}
+\end{document}

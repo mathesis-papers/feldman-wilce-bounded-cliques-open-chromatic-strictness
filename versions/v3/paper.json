@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 103305,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "da54a1bc2f2c048a16b0495042c759b6081c1526f93edf665d25fcb76fe0c2f8",
+      "sha256": "da54a1bc2f2c048a16b0495042c759b6081c1526f93edf665d25fcb76fe0c2f8"
+    },
+    "source": {
+      "bytes": 14789,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "3d220a4e330fd3220bde42e962a4c5a5560c7f7d8d84f0edb2de5e2c5b59f1d3",
+      "sha256": "3d220a4e330fd3220bde42e962a4c5a5560c7f7d8d84f0edb2de5e2c5b59f1d3"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending the conditional example of Brandsma, van Hartskamp and van Mill (1997, Example 2.3, pp. 28–29), we answer yes in ZFC to Feldman and Wilce’s Section 5, Question 2, p. 11 of arXiv:2608.13320v1: the bounded-clique property is strictly weaker than the finite open chromatic property, as witnessed by a deleted-square construction. The space D(βℕ)=(βℕ)²∖Δ has countably compact countable power, so every symmetric irreflexive relation closed in its whole square has a finite bound on clique size. Its coordinate-swap relation nevertheless has no countable cover by open independent sets. Clopen separation proves the compactness assertion, and an infinite Ramsey argument proves the coloring obstruction. We also give an explicit higher power that is not countably compact and derive the sphere lower bound suggested by Feldman and Wilce from Holmsen–Lee’s theorem.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Topology/StoneCech/DeletedSquareChromatic.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 103305,
+      "sha256": "da54a1bc2f2c048a16b0495042c759b6081c1526f93edf665d25fcb76fe0c2f8",
+      "url": "/api/v1/collected-papers/feldman-wilce-bounded-cliques-open-chromatic-strictness/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-24T02:29:53.451187235Z",
+    "record": "feldman-wilce-bounded-cliques-open-chromatic-strictness",
+    "repository_name": "feldman-wilce-bounded-cliques-open-chromatic-strictness",
+    "source": {
+      "bytes": 14789,
+      "sha256": "3d220a4e330fd3220bde42e962a4c5a5560c7f7d8d84f0edb2de5e2c5b59f1d3",
+      "url": "/api/v1/collected-papers/feldman-wilce-bounded-cliques-open-chromatic-strictness/files/source?version=3"
+    },
+    "title": "A ZFC extension of Brandsma–van Hartskamp–van Mill's example for Feldman–Wilce's bounded-clique question",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-24T02:29:53.451187235Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "feldman-wilce-bounded-cliques-open-chromatic-strictness"
+  }
+}

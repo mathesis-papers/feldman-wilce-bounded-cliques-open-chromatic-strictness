@@ -1,0 +1,23 @@
+{
+  "id": "feldman-wilce-bounded-cliques-open-chromatic-strictness",
+  "revision": 3,
+  "problem_ids": [
+    "feldman-wilce-bounded-cliques-open-chromatic-strictness"
+  ],
+  "topic": "Strictness of finite open chromatic property implies bounded-clique property",
+  "title": "A ZFC extension of Brandsma–van Hartskamp–van Mill's example for Feldman–Wilce's bounded-clique question",
+  "creators": [
+    {
+      "name": "Haobo Ma",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Wenlin Zhang",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "Extending the conditional example of Brandsma, van Hartskamp and van Mill (1997, Example 2.3, pp. 28–29), we answer yes in ZFC to Feldman and Wilce’s Section 5, Question 2, p. 11 of arXiv:2608.13320v1: the bounded-clique property is strictly weaker than the finite open chromatic property, as witnessed by a deleted-square construction. The space D(βℕ)=(βℕ)²∖Δ has countably compact countable power, so every symmetric irreflexive relation closed in its whole square has a finite bound on clique size. Its coordinate-swap relation nevertheless has no countable cover by open independent sets. Clopen separation proves the compactness assertion, and an infinite Ramsey argument proves the coloring obstruction. We also give an explicit higher power that is not countably compact and derive the sphere lower bound suggested by Feldman and Wilce from Holmsen–Lee’s theorem.",
+  "summary": "A ZFC deleted-square witness has the bounded-clique property and swap open chromatic number between ℵ₁ and the continuum. The compactness mechanism is credited to Protasov–Pym–Strauss (2000). Written deductions cover compact F-space countable powers, infinite compact Hausdorff extremally disconnected spaces, a non-countably-compact higher power, and the sphere lower bound five, with earlier existence and structural results credited separately.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Topology/StoneCech/DeletedSquareChromatic.lean"
+}
