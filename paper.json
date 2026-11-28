@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24488118",
     "current_version": 3,
     "doi": "10.5281/zenodo.24488119",
+    "kind": "note",
     "lean_source": {
       "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
       "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Topology/StoneCech/DeletedSquareChromatic.lean"
@@ -55,10 +56,12 @@
     "title": "A ZFC extension of Brandsma–van Hartskamp–van Mill's example for Feldman–Wilce's bounded-clique question",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-24T02:29:53.451187235Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "feldman-wilce-bounded-cliques-open-chromatic-strictness"
